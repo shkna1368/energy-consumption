@@ -1,0 +1,83 @@
+1-download joularx from:
+https://github.com/joular/joularjx/releases/
+copy jar file in drive c
+
+2-download config.properties from :
+https://github.com/joular/joularjx/releases/
+
+ 
+change application-server=true
+copy file to drive c
+
+3-download powermonitor from :
+https://github.com/joular/WinPowerMonitor/releases/
+
+copy file to :
+C:\joularjx
+
+4-make jar file from project and set graceful on app and copy jar file to drive c :
+configuration in app
+server:
+  shutdown: 'graceful'
+
+
+spring:
+  codec:
+    max-in-memory-size: 3000KB
+
+  lifecycle:
+    timeout-per-shutdown-phase: "5s"
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
+
+go to drive c:
+
+java -javaagent:joularjx-3.0.1.jar -jar merch.jar
+
+send load test :
+
+ab -k -c 350 -n 20000 http://localhost:8070/crawl/notiftest
+
+call gracefull shutdown with actuator :
+
+http://localhost:8070/crawl/actuator/shutdown
+
+
+in log check jouls (energy consumptions) and in drive c in report check reports 
+
+
+more help:
+
+
+https://medium.com/growing-green-software/evolution-of-energy-usage-in-spring-boot-69c7c372dba3
+
+https://medium.com/growing-green-software/comparing-java-virtual-machine-energy-efficiency-e2e8658539b8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://medium.com/growing-green-software/evolution-of-energy-usage-in-spring-boot-69c7c372dba3
