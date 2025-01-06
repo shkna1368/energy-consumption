@@ -7,6 +7,7 @@ https://github.com/joular/joularjx/releases/
 
  
 change application-server=true
+change filter-method-names=com.shabab.merchantcrawler.firebase  to package name
 copy file to drive c
 
 3-download powermonitor from :
