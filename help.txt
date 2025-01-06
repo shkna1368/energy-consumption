@@ -43,7 +43,7 @@ management:
 
 go to drive c:
 
-java -javaagent:joularjx-3.0.1.jar -jar merch.jar
+java -javaagent:joularjx-3.0.1.jar -jar merch.jar -Djoularjx.config=config.properties
 
 send load test :
 
