@@ -56,6 +56,9 @@ http://localhost:8070/crawl/actuator/shutdown
 in log check jouls (energy consumptions) and in drive c in report check reports 
 
 
+06/01/2025 11:26:24.904 - [INFO] - JoularJX finished monitoring application with ID 2156
+06/01/2025 11:26:24.905 - [INFO] - Program consumed 288.64 joules
+
 more help:
 
 
